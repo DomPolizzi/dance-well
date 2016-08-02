@@ -9,6 +9,14 @@
 title: Dance Well
 url:  # the base hostname & protocol for your site
 
+# Collections
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 
 # Build settings
 markdown: kramdown
