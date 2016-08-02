@@ -12,3 +12,10 @@ url:  # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+exclude:
+- node_modules
+- README.markdown
+- package.json
+- gulp.js
+- gulpfile.js
