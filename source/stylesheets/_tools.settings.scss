@@ -137,9 +137,9 @@ $fontsizes: (
 		lg            : 42px
 	),
 	Display: (
-		xs            : 40px,
-		sm            : 54px,
-		lg            : 60px
+		xs            : 54px,
+		sm            : 66px,
+		lg            : 80px
 	)
 );
 
@@ -240,28 +240,30 @@ $font-sans-stack      : -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica 
 $font-serif-stack     : Georgia, "Times New Roman", "Times", serif;
 $font-mono-stack      : Menlo, Monaco, Consolas, "Liberation Mono", 'Courier New', 'Andale Mono', 'Lucida San Typewriter', 'Lucida Console', monospace;
 
-$fonts-path           : '/assets/fonts/';
+$fonts-path           : '/build/fonts/';
 
-$font-sans-name       : 'AtlasGrotesk';
+$font-sans-name       : '';
 $font-serif-name      : 'Nocturno';
-$font-display-name    : 'display'; // NocturnoDisplay-Bold AntiqueOlive-Bold GrotesqueMT-Condensed Gothic-Thirteen LarishNeue
+$font-display-name    : 'bold'; // NocturnoDisplay-Bold AntiqueOlive-Bold GrotesqueMT-Condensed Gothic-Thirteen LarishNeue
 
 // Create font-file variables
 
-$text-thin            : #{$font-sans-name}-Thin;
-$text-light           : #{$font-sans-name}-Light;
-$text-book            : #{$font-sans-name}-Regular;
-$text-regular         : #{$font-sans-name}-Regular;
-$text-medium          : #{$font-sans-name}-Medium;
-$text-semi            : #{$font-sans-name}-Semibold;
-$text-bold            : #{$font-sans-name}-Bold;
-$text-xbold           : #{$font-sans-name}-Extrabold;
-$text-black           : #{$font-sans-name}-Black;
+$text-thin            : #{$font-sans-name}thin;
+$text-light           : #{$font-sans-name}light;
+$text-book            : #{$font-sans-name}regular;
+$text-regular         : #{$font-sans-name}regular;
+$text-medium          : #{$font-sans-name}medium;
+$text-semi            : #{$font-sans-name}semibold;
+$text-bold            : #{$font-sans-name}bold;
+$text-xbold           : #{$font-sans-name}extrabold;
+$text-black           : #{$font-sans-name}black;
 
-$text-regular-italic  : #{$font-sans-name}-RegularItalic;
-$text-medium-italic   : #{$font-sans-name}-MediumItalic;
-$text-semi-italic     : #{$font-sans-name}-SemiboldItalic;
-$text-bold-italic     : #{$font-sans-name}-BoldItalic;
+$text-regular-italic  : #{$font-sans-name}RegularItalic;
+$text-medium-italic   : #{$font-sans-name}MediumItalic;
+$text-semi-italic     : #{$font-sans-name}SemiboldItalic;
+$text-bold-italic     : #{$font-sans-name}BoldItalic;
+
+$display              : #{$font-display-name};
 
 // Make all font files available
 // Mixin options: $font-family, $file-path, $weight, $style, $formats
@@ -295,7 +297,9 @@ $font-text-bold-i     : join($text-bold-italic, $main-font-stack);
 $font-text-xbold      : join($text-xbold, $main-font-stack);
 $font-text-black      : join($text-black, $main-font-stack);
 $font-text-regular-i  : join($text-regular-italic, $main-font-stack);
-//$font-display         : join($display, $font-display-stack);
+
+//$font-display         : join($text-bold, $main-font-stack);
+$font-display         : bold;
 
 // if using @fontface via a cloud service, eg. Google fonts.
 
@@ -314,7 +318,7 @@ $font-text-regular-i  : join($text-regular-italic, $main-font-stack);
 
 // For this project…
 
-$display: 'display';
+$display: 'bold';
 $serif-sm: 'regular';
 $serif-lg: 'book';
 

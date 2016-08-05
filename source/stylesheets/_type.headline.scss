@@ -28,7 +28,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: $mixinMarginBottom;
-	text-align: center;
 
 	// sizes
 	font-size: fontsize($mixinSize, xs);
@@ -50,31 +49,34 @@
 
 // Components by size…
 
-@mixin headlineSm() {
-	@include headlineTemplate(
-		$mixinSize: Headline--sm,
-		$mixinFont: $serif-lg, // TEST
-		$mixinLetterSpacing: 0.012em
-	);
-	text-align: left;
-}
-
-@mixin headline() {
-	@include headlineTemplate(
-		$mixinSize: Headline
-	);
-}
-
 @mixin display() {
 	@include headlineTemplate(
-		$mixinLetterSpacing: -0.005em,
-		$mixinLineHeight: 1.1
+	$mixinLetterSpacing: -0.005em,
+	$mixinLineHeight: 1.1
 	);
+
+	//font-family: bold;
 
 	@include when-inside(".Footer") {
 		margin-bottom: space(1.25);
 	}
 }
+
+@mixin headline() {
+	@include headlineTemplate(
+	$mixinSize: Headline
+	);
+}
+
+@mixin headlineSm() {
+	@include headlineTemplate(
+		$mixinSize: Headline--sm,
+		$mixinFont: $text-black, // TEST
+		$mixinLetterSpacing: 0.012em
+	);
+	text-align: left;
+}
+
 
 
 

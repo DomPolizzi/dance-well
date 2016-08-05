@@ -15,6 +15,7 @@
 
 @import "vendor.suitcss.u-position";
 @import "vendor.suitcss.u-size";
+@import "vendor.suitcss.u-before";
 @import "vendor.suitcss.u-flexbox";
 @import "vendor.suitcss.u-text";
 @import "vendor.suitcss.c-button";
@@ -43,12 +44,13 @@
 // @import "object.coverimage";
 
 // @import "type.text";
-// @import "type.headline";
+@import "type.headline";
 // @import "type.helpers";
 // @import "type.scope";
 
 // @import "component.loadanimations";
 
+@import "layout.page";
 // @import "layout.header";
 // @import "layout.blocks";
 // @import "layout.post";
